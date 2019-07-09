@@ -1,0 +1,28 @@
+.medals-form {
+  margin: 0 10px;
+  text-align: center;
+  margin-bottom: 15px;
+
+  &__input {
+    &__country {
+      width: 40%;
+    }
+    &__medal {
+      width: 20%;
+    }
+  }
+
+  &__save__button {
+    width: 100%;
+    background-color: #4caf50;
+  }
+}
+
+@media (min-width: 576px) {
+  .medals-form {
+    margin: -0;
+    &__save__button {
+      width: 40%;
+    }
+  }
+}

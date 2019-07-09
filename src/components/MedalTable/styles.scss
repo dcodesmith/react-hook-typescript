@@ -1,0 +1,87 @@
+@mixin medal-style {
+  display: inline-flex;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+}
+
+.grid {
+  margin: 0 10px;
+}
+
+.medal-table {
+  width: 100%;
+  border-collapse: collapse;
+
+  &__row {
+    &:hover {
+      background: #efefef;
+      cursor: pointer;
+    }
+  }
+
+  &__body {
+    text-align: center;
+
+    &__cell {
+      border-bottom: 1px solid #cfcfcf;
+      padding: 5px 0;
+
+      &:nth-child(2) {
+        text-align: left;
+      }
+
+      &__actions {
+        display: flex;
+      }
+    }
+
+    &__country {
+      display: inline-flex;
+      margin-left: 10px;
+    }
+  }
+
+  &__delete__button {
+    color: red;
+    border: 1px solid red;
+    background: transparent;
+  }
+
+  &__edit__button {
+    border: 1px solid #0989ef;
+    background: #0989ef;
+    margin-left: 5px;
+  }
+
+  &__header__cell {
+    font-weight: 500;
+    padding: 10px 0;
+    border-bottom: 1px solid #cfcfcf;
+
+    &--gold {
+      @include medal-style();
+      background: gold;
+    }
+
+    &--silver {
+      @include medal-style();
+      background: silver;
+    }
+
+    &--bronze {
+      @include medal-style();
+      background: brown;
+    }
+
+    &:nth-child(2) {
+      text-align: left;
+    }
+  }
+}
+
+@media (min-width: 576px) {
+  .grid {
+    margin: 0;
+  }
+}
